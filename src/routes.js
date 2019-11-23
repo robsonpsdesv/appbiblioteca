@@ -2,8 +2,9 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-import GeneroCad from './pages/genero/generoCad';
-import GeneroList from './pages/genero/generoList';
+import GeneroCad from './pages/genero-cadastro';
+import GeneroList from './pages/genero-lista';
+
 import LivroCad from './pages/livro/livroCad';
 import LivroList from './pages/livro/livroList';
 
