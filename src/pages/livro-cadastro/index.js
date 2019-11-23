@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import {
-    View, Text, StyleSheet,
-    KeyboardAvoidingView, TextInput, TouchableOpacity, Alert, Picker, Platform
+    Alert, Picker
 } from 'react-native';
+
 import api from '../../services/api';
+
+import {
+    Container, Titulo, Form, FormInput, SubmitButton, ButtonLabel
+} from './styles'
+
 export default function LivroCad() {
     const [nome, setNome] = useState('');
     const [volume, setVolume] = useState('');
@@ -38,28 +43,27 @@ export default function LivroCad() {
         }
     }
     return (
-        <KeyboardAvoidingView enabled={Platform.OS == 'ios'}
-            behavior="padding" style={styles.container}>
-            <Text style={styles.titulo}>Cadastro de livro</Text>
-            <View style={styles.form}>
-                <TextInput style={styles.input}
+        <Container>
+            <Titulo>Cadastro de livro</Titulo>
+            <Form>
+                <FormInput
                     placeholder="Nome do livro"
                     placeholderTextColor="#999"
                     value={nome}
                     onChangeText={setNome} />
-                <TextInput style={styles.input}
+                <FormInput
                     placeholder="Volume"
                     placeholderTextColor="#999"
                     value={volume}
                     onChangeText={setVolume}
                     keyboardType="numeric" />
-                <TextInput style={styles.input}
+                <FormInput
                     placeholder="Valor"
                     placeholderTextColor="#999"
                     value={valor}
                     onChangeText={setValor}
                     keyboardType="decimal-pad" />
-                <TextInput style={styles.input}
+                <FormInput
                     placeholder="Data de publicação"
                     placeholderTextColor="#999"
                     value={dataPublicacao}
@@ -75,51 +79,10 @@ export default function LivroCad() {
                         })
                     }
                 </Picker>
-                <TouchableOpacity style={styles.botao} onPress={handleSubmit}>
-                    <Text style={styles.botaoTexto}>Salvar</Text>
-                </TouchableOpacity>
-            </View>
-        </KeyboardAvoidingView>
+                <SubmitButton onPress={handleSubmit}>
+                    <ButtonLabel>Salvar</ButtonLabel>
+                </SubmitButton>
+            </Form>
+        </Container>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    titulo: {
-        fontSize: 20
-    },
-    form: {
-        alignSelf: 'stretch',
-        paddingHorizontal: 30,
-        marginTop: 30
-    },
-    label: {
-        fontWeight: 'bold',
-        color: '#444',
-        marginBottom: 8
-    },
-    input: {
-        borderWidth: 1,
-        borderColor: '#ddd',
-        paddingHorizontal: 20,
-        fontSize: 16,
-        color: '#444',
-        marginBottom: 20,
-        borderRadius: 2
-    },
-    botao: {
-        height: 42,
-        backgroundColor: '#f05a5b',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 2
-    },
-    botaoTexto: {
-        color: '#FFF',
-        fontWeight: 'bold',
-        fontSize: 16
-    }
-});

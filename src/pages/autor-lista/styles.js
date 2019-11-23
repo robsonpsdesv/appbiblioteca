@@ -34,9 +34,7 @@ export const Form = styled.View`
   padding: 30px;
 `;
 
-export const Card = styled.View`  
-  flex: 1;
-  align-self: stretch;
+export const Card = styled.View`
   background-color: #FFF;
   border-radius: 5px;
   padding: 10px;
