@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import api from '../../services/api';
 
-import { Container, Form, Titulo, Label, FormInput, SubmitButton, ButtonLabel } from './styles'
+import {
+    Container,
+    Formulario,
+    Titulo, Label, FormInput, SubmitButton, ButtonLabel
+} from './styles'
 
 export default function GeneroCad() {
     const [descricao, setDescricao] = useState('');
@@ -22,7 +26,7 @@ export default function GeneroCad() {
     }
     return (
         <Container>
-            <Form>
+            <Formulario>
                 <Titulo>Cadastro de Genero</Titulo>
                 <Label>Descrição: *</Label>
                 <FormInput
@@ -33,7 +37,7 @@ export default function GeneroCad() {
                 <SubmitButton onPress={handleSubmit}>
                     <ButtonLabel>Salvar</ButtonLabel>
                 </SubmitButton>
-            </Form>
+            </Formulario>
         </Container>
     );
 }

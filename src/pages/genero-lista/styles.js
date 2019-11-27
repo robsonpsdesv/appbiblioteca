@@ -11,16 +11,14 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   flex: 1;
   justify-content: center;
   align-items: stretch;
-  padding: 0 30px;
-  margin-top: 10px;
   background-color: #0000FF;
 `;
 
 export const List = styled.FlatList.attrs({
-  showsVerticalScrollIndicator: false,
-  contentContainerStyle: { padding: 30 },
+  showsVerticalScrollIndicator: false
 })
-  ``
+  `
+  `
 export const Titulo = styled.Text`
   font-size: 18px;
   margin-top: 30px;
@@ -31,11 +29,10 @@ export const Titulo = styled.Text`
 
 export const Form = styled.View`
   align-self: stretch;
-  padding: 30px;
+  padding: 10px;
 `;
 
 export const Card = styled.View`  
-  flex: 1;
   align-self: stretch;
   background-color: #FFF;
   border-radius: 5px;
@@ -66,3 +63,9 @@ export const ButtonLabel = styled.Text`
   font-weight: bold;
   font-size: 16px;
 `;
+
+export const Excluir = styled.Text`
+  color: #f0505b;
+  font-weight: bold;
+  font-size: 16
+`

@@ -14,7 +14,7 @@ export const Container = styled.KeyboardAvoidingView.attrs({
   padding: 0 30px;
 `;
 
-export const Form = styled.View`
+export const Formulario = styled.View`
   align-self: stretch;
   padding: 30px;
   margin-top: 30px;
