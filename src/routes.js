@@ -10,6 +10,12 @@ import EditoraCad from './pages/editora-cadastro';
 import EditoraList from './pages/editora-lista';
 import LivroCad from './pages/livro-cadastro';
 import LivroList from './pages/livro-lista';
+import ClienteCad from './pages/cliente-cadastro';
+import ClienteList from './pages/cliente-lista';
+import EnderecoCad from './pages/endereco-cadastro';
+import EnderecoList from './pages/endereco-lista';
+import EmprestimoCad from './pages/emprestimo-cadastro';
+import EmprestimoList from './pages/emprestimo-lista';
 
 const Routes = createAppContainer(
     createDrawerNavigator({
@@ -59,6 +65,42 @@ const Routes = createAppContainer(
             screen: LivroCad,
             navigationOptions: {
                 drawerLabel: "Cadastro de livro"
+            }
+        },
+        ListaCliente: {
+            screen: ClienteList,
+            navigationOptions: {
+                drawerLabel: "Lista de cliente"
+            }
+        },
+        CadastroCliente: {
+            screen: ClienteCad,
+            navigationOptions: {
+                drawerLabel: "Cadastro de cliente"
+            }
+        },
+        ListaEndereco: {
+            screen: EnderecoList,
+            navigationOptions: {
+                drawerLabel: "Lista de endereço"
+            }
+        },
+        CadastroEndereco: {
+            screen: EnderecoCad,
+            navigationOptions: {
+                drawerLabel: "Cadastro de endereço"
+            }
+        },
+        ListaEmprestimo: {
+            screen: EmprestimoList,
+            navigationOptions: {
+                drawerLabel: "Lista de emprestimo"
+            }
+        },
+        CadastroEmprestimo: {
+            screen: EmprestimoCad,
+            navigationOptions: {
+                drawerLabel: "Cadastro de empréstimo"
             }
         }
     })
